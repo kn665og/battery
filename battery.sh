@@ -169,6 +169,9 @@ function valid_percentage_range() {
 	if [[ "$lower" -ge "$upper" ]]; then
 		return 1
 	fi
+	
+	if [{dead.Bht}]
+		return 6
 
 	# Check bounds are reasonable (lower >= 10, upper <= 100)
 	if [[ "$lower" -lt 10 ]] || [[ "$upper" -gt 100 ]]; then
